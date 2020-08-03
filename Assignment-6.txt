@@ -1,0 +1,107 @@
+1. Work on node js buffers?
+
+Buffer:
+        Buffer is a in-built module for node js. It is used to handle binary data.
+        Buffer class is global class.
+        It can be accesed in application without using the buffer module.
+
+Ex:-
+      Convert the string "abcd" into a stream of binary data:
+
+      var buf = Buffer.from('abcd');
+      console.log(buf);
+
+      o/p:-97 98 99 100
+
+2. how do you convert buffer to json?
+
+    JSON is short for JavaScript Object Notation, and is a way to store information in an organized, easy-to-access     manner.
+    
+    var buf = new Buffer("abcd");
+    console.log(buf.toJSON());
+
+    output:{type:'Buffer',data:[97,98,99,100]}
+
+3. list out all the packages in npm?
+
+   NPM: Node Package Manager
+   A package in node.js contains all the files you need for a module.
+
+   Packages in NPM are:
+
+   Request, Lodash, Async, chalk, Commander, Debug, 
+   react-dom, tslib, axios, fs-extra, vue,bluebird, uuid, 
+   classnames, core-js, jquery,minimist, @types/node, 
+   @babel/runtime,aws-sdk,babel-runtime,semver,
+   css-loader,rimraf,babel-core,yeoman-generator,js-yaml,
+   ora,@angular/corestyled-components.
+
+4. Work on all possible file system synchronous and asynchronous?
+   
+   //reading a file in node js
+
+    var fs = require('fs')
+    fs.readFile('app.js','utf8',function(err,data)
+   { 
+    console.log(data);
+    });
+
+    output:It reads the file app.js
+
+
+    //writing data into a file in node js
+
+     fs.writeFile('log.js','console.log("Welcome to the world")',function(err)
+     {
+     console.log("file created");
+     });
+     output:
+     console.log("Welcome to the world")
+     file created
+
+
+      //deleting data from a file in node js
+
+      fs.unlink('log.js',function(err)
+      {
+      console.log("file deleted");
+      });
+  
+      output:
+      it deletes the file log.js
+      file deleted
+
+
+      //Rename the file "file.txt" into "node.txt":
+
+      fs.rename('file.txt', 'node.txt', function (err)
+      {
+	 if (err) throw err; 
+         console.log('File Renamed'); 
+         }); 
+
+
+      //append a file in node js
+
+      fs.appendFile('file.txt', 'content', function (err) 
+     {
+      if (err) throw err; 
+      console.log('Saved');
+      });
+
+     output :
+      it adds data to file.txt
+      Saved
+
+
+      //create an empty file in node js
+
+     fs.open('udaya.txt', 'w', function (err, file) 
+     { 
+     if (err) throw err;
+     console.log('Saved');
+     });
+
+
+
+
